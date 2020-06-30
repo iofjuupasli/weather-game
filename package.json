@@ -1,0 +1,38 @@
+{
+  "name": "weather-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production parcel build --public-url '.' -d docs ./index.html",
+    "start": "parcel serve ./index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iofjuupasli/weather-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iofjuupasli/weather-game/issues"
+  },
+  "homepage": "https://github.com/iofjuupasli/weather-game#readme",
+  "dependencies": {
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.41",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "@types/styled-components": "^5.1.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.5"
+  }
+}

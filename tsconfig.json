@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+        "lib": ["ES2015", "DOM"]
+    }
+}
