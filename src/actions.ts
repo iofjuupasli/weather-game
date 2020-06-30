@@ -7,6 +7,14 @@ let cities = shuffle(citiesUnshuffled);
 
 const countOfOptions = 2;
 
+const distinctCountBy = (array, mapFn): number =>
+    Object.keys(
+        array.reduce((result, item) => {
+            result[mapFn(item)] = true;
+            return result;
+        }, {}),
+    ).length;
+
 const getRandomOptions = async () => {
     if (cities.length < 2) {
         cities = shuffle(citiesUnshuffled);
@@ -19,6 +27,13 @@ const getRandomOptions = async () => {
                 temperature: await getTemperature(item.city, item.countryIso),
             })),
         );
+        const temperatureDistinctCount = distinctCountBy(
+            optionsWithTemperature,
+            ({ temperature }) => temperature,
+        );
+        if (temperatureDistinctCount != optionsWithTemperature.length) {
+            return getRandomOptions();
+        }
         return optionsWithTemperature;
     } catch (error) {
         console.error(error);
