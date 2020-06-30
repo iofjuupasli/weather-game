@@ -11,6 +11,10 @@ const MenuPart = styled.div`
     display: flex;
     align-items: center;
     padding: 36px;
+
+    @media (max-width: 768px) {
+        padding: 12px;
+    }
 `;
 
 const MenuLeft = styled(MenuPart)`

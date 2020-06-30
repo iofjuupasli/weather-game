@@ -19,9 +19,15 @@ const GameOptionContainer = styled.div`
     &:hover {
         opacity: 0.7;
     }
+
+    @media (max-width: 768px) {
+        padding: 2px;
+        margin: 8px;
+    }
 `;
 
 const Img = styled.img`
+    position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -29,25 +35,39 @@ const Img = styled.img`
 
 const GameOptionText = styled.div`
     color: #fff;
-    position: absolute;
-    left: 0;
-    right: 0;
+    opacity: 0.99;
     text-align: center;
+    padding: 8px;
+
+    @media (max-width: 768px) {
+        padding: 2px;
+    }
 `;
 
 const City = styled(GameOptionText)`
-    top: 40px;
     font-size: 48px;
+    padding-top: 24px;
+
+    @media (max-width: 768px) {
+        padding-top: 2px;
+        font-size: 18px;
+    }
 `;
 
 const Country = styled(GameOptionText)`
-    top: 96px;
     font-size: 36px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 `;
 
 const Temperature = styled(GameOptionText)`
-    top: 140px;
     font-size: 36px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 `;
 
 type Props = {
